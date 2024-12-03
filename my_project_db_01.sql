@@ -5,18 +5,15 @@
 
 SELECT 'Installation Starting!!!' AS 'Status';
 
-DROP DATABASE IF EXISTS my_project_db;
+DROP DATABASE IF EXISTS my_project_db_01;
 
-CREATE DATABASE my_project_db
-CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE my_project_db_01;
 
-
-USE my_project_db;
+SELECT 'LINE 12' AS 'DATABASE CREATION COMPLETED', DATABASE() AS 'DATABASE NAME';
 SHOW DATABASES;
-SELECT 'Database Creation Completed' AS 'Status';
 
+USE my_project_db_01;
 
-DROP TABLE IF EXISTS category;
 
 CREATE TABLE IF NOT EXISTS category(
       category_id CHAR(2) ,
@@ -26,7 +23,6 @@ CREATE TABLE IF NOT EXISTS category(
 SELECT 'Category Table Created' AS 'Status';
 SELECT * FROM category;
 
-DROP TABLE IF EXISTS product;
 
 CREATE TABLE IF NOT EXISTS product(
       product_id CHAR(3),
@@ -40,7 +36,6 @@ CREATE TABLE IF NOT EXISTS product(
 SELECT 'Product Table Created' AS 'Status';
 SELECT * FROM product;
 
-DROP TABLE IF EXISTS customer;
 
 CREATE TABLE IF NOT EXISTS customer(
       customer_id CHAR(7) ,
@@ -51,7 +46,6 @@ CREATE TABLE IF NOT EXISTS customer(
 SELECT 'Customer Table Created' AS 'Status';
 SELECT * FROM customer;
 
-DROP TABLE IF EXISTS soldvia;
 
 CREATE TABLE IF NOT EXISTS  soldvia(
       product_id CHAR(3) ,
@@ -64,7 +58,6 @@ CREATE TABLE IF NOT EXISTS  soldvia(
 SELECT 'SoldVia Table Created' AS 'Status';
 SELECT * FROM soldvia;
 
-DROP TABLE IF EXISTS vendor;
 
 CREATE TABLE IF NOT EXISTS vendor(
       vendor_id CHAR(2) ,
@@ -74,7 +67,6 @@ CREATE TABLE IF NOT EXISTS vendor(
 SELECT 'Vendor Table Created' AS 'Status';
 SELECT * FROM vendor;
 
-DROP TABLE IF EXISTS store;
 
 CREATE TABLE IF NOT EXISTS store(
       store_id VARCHAR(3) ,
@@ -86,7 +78,6 @@ CREATE TABLE IF NOT EXISTS store(
 SELECT 'Store Table Created' AS 'Status';
 SELECT * FROM store;
 
-DROP TABLE IF EXISTS salestransaction;
 
 CREATE TABLE IF NOT EXISTS salestransaction(
       t_id VARCHAR(8) ,
@@ -101,7 +92,6 @@ CREATE TABLE IF NOT EXISTS salestransaction(
 SELECT 'SalesTransaction Table Created' AS 'Status';
 SELECT * FROM salestransaction;
 
-DROP TABLE IF EXISTS region;
 
 CREATE TABLE IF NOT EXISTS region(
     region_id CHAR(1) ,
