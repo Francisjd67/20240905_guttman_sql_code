@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS category(
 );
 SELECT 'Category Table Created' AS 'Status';
 SELECT * FROM category;
+SHOW TABLES;
 
 
 CREATE TABLE IF NOT EXISTS product(
@@ -40,6 +41,7 @@ CREATE TABLE IF NOT EXISTS product(
 );
 SELECT 'Product Table Created' AS 'Status';
 SELECT * FROM product;
+SHOW TABLES;
 
 
 CREATE TABLE IF NOT EXISTS customer(
@@ -50,6 +52,7 @@ CREATE TABLE IF NOT EXISTS customer(
 );
 SELECT 'Customer Table Created' AS 'Status';
 SELECT * FROM customer;
+SHOW TABLES;
 
 
 CREATE TABLE IF NOT EXISTS  soldvia(
@@ -62,6 +65,7 @@ CREATE TABLE IF NOT EXISTS  soldvia(
 );
 SELECT 'SoldVia Table Created' AS 'Status';
 SELECT * FROM soldvia;
+SHOW TABLES;
 
 
 CREATE TABLE IF NOT EXISTS vendor(
@@ -71,6 +75,7 @@ CREATE TABLE IF NOT EXISTS vendor(
 );
 SELECT 'Vendor Table Created' AS 'Status';
 SELECT * FROM vendor;
+SHOW TABLES;
 
 
 CREATE TABLE IF NOT EXISTS store(
@@ -82,6 +87,7 @@ CREATE TABLE IF NOT EXISTS store(
 );
 SELECT 'Store Table Created' AS 'Status';
 SELECT * FROM store;
+SHOW TABLES;
 
 
 CREATE TABLE IF NOT EXISTS salestransaction(
@@ -96,15 +102,4 @@ CREATE TABLE IF NOT EXISTS salestransaction(
 );
 SELECT 'SalesTransaction Table Created' AS 'Status';
 SELECT * FROM salestransaction;
-
-
-CREATE TABLE IF NOT EXISTS region(
-    region_id CHAR(1) ,
-    region_name VARCHAR(25) ,
-    PRIMARY KEY (region_id),
-    FOREIGN KEY (region_id) REFERENCES store(region_id)
-);
-SELECT 'Region Table Created' AS 'Status';
-SELECT * FROM region;
-
-SELECT 'Installation Completed' AS 'Status';
+SHOW TABLES;
